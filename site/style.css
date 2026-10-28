@@ -1,0 +1,470 @@
+/* =========================================
+   1. ЦВЕТОВАЯ ПАЛИТРА И CSS-ПЕРЕМЕННЫЕ
+   ========================================= */
+
+:root {
+    --primary-color: #465744;
+    --secondary-color: #E8EDE3;
+    --accent-color: #91A68A;
+    --accent-dark: #637B5C;
+    --text-color: #30382F;
+    --background-color: #F5F4EA;
+    --card-color: #FFFFFF;
+    --border-color: #D4DDCE;
+    --highlight-color: #F5EDB8;
+    --important-color: #A13F42;
+    --footer-color: #374535;
+    --shadow-color: rgba(48, 56, 47, 0.10);
+}
+
+/* =========================================
+   2. ОБЩИЕ СТИЛИ ДОКУМЕНТА
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 1.5rem;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* =========================================
+   3. ЗАГОЛОВКИ И ТЕКСТ
+   ========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lora", Georgia, serif;
+    line-height: 1.3;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.7rem;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: var(--accent-dark);
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+h5 {
+    font-size: 1.1rem;
+    color: var(--accent-dark);
+}
+
+h6 {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+strong {
+    font-weight: 700;
+}
+
+em {
+    color: var(--accent-dark);
+}
+
+/* =========================================
+   4. ШАПКА САЙТА
+   ========================================= */
+
+header {
+    margin: 0 auto 1.5rem;
+    padding: 2rem;
+    color: var(--card-color);
+    background-color: var(--primary-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 1.25rem;
+    box-shadow: 0 0.3rem 1rem var(--shadow-color);
+}
+
+header h1 {
+    color: var(--card-color);
+}
+
+header p {
+    max-width: 48rem;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+    color: #F0F3EC;
+}
+
+header h2 {
+    color: var(--card-color);
+}
+
+/* =========================================
+   5. НАВИГАЦИОННОЕ МЕНЮ
+   ========================================= */
+
+nav {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background-color: #53664F;
+    border: 1px solid #A9B9A0;
+    border-radius: 0.9rem;
+}
+
+nav h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 0.65rem 1rem;
+    color: #FFFFFF;
+    background-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+nav a:visited {
+    color: #E2EBDD;
+}
+
+nav a:hover {
+    color: #FFFFFF;
+    background-color: var(--accent-dark);
+    border-color: #DCE6D5;
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+nav a:active {
+    color: #FFFFFF;
+    background-color: #344531;
+    transform: translateY(0);
+}
+
+/* =========================================
+   6. ГЛАВНЫЙ БЛОК
+   ========================================= */
+
+main {
+    max-width: 70rem;
+    margin: 0 auto 1.5rem;
+    padding: 1.5rem;
+    background-color: #EEF0E7;
+    border: 2px solid #D5DDCD;
+    border-radius: 1.25rem;
+}
+
+/* =========================================
+   7. СЕКЦИИ
+   ========================================= */
+
+section {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-left: 0.35rem solid var(--accent-color);
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 0.7rem var(--shadow-color);
+}
+
+section h2 {
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Уникальная секция навыков на about.html */
+
+#skills {
+    background-color: #F0F4EB;
+    border-color: #C4D2BC;
+    border-left-color: var(--primary-color);
+}
+
+/* =========================================
+   8. СТАТЬИ
+   ========================================= */
+
+article {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background-color: #E5EDE0;
+    border: 1px solid #BFCDB7;
+    border-top: 0.3rem solid var(--accent-dark);
+    border-radius: 0.8rem;
+}
+
+article h2 {
+    color: var(--primary-color);
+}
+
+/* =========================================
+   9. ДОПОЛНИТЕЛЬНЫЕ БЛОКИ
+   ========================================= */
+
+aside {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background-color: #F7F2E5;
+    border: 1px solid #E0D6BD;
+    border-left: 0.35rem solid #B6A477;
+    border-radius: 0.8rem;
+}
+
+aside h2 {
+    color: #665B3F;
+}
+
+/* =========================================
+   10. СПИСКИ
+   ========================================= */
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+li {
+    margin-bottom: 0.45rem;
+}
+
+li ul {
+    margin-top: 0.5rem;
+}
+
+dl {
+    margin: 0;
+    padding-left: 0.5rem;
+}
+
+dt {
+    margin-top: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+dd {
+    margin-top: 0.25rem;
+    margin-bottom: 0.8rem;
+}
+
+/* =========================================
+   11. ССЫЛКИ
+   ========================================= */
+
+a {
+    color: #4B7250;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:visited {
+    color: #756184;
+}
+
+a:hover {
+    color: #315A38;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #A13F42;
+}
+
+/* =========================================
+   12. ФОТОГРАФИИ И ПОДПИСИ
+   ========================================= */
+
+figure {
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 3px solid var(--border-color);
+    border-radius: 0.9rem;
+    box-shadow: 0 0.25rem 0.8rem var(--shadow-color);
+    transition: transform 0.25s ease;
+}
+
+figure img:hover {
+    transform: scale(1.02);
+}
+
+figcaption {
+    margin-top: 0.65rem;
+    color: #626D5D;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+/* =========================================
+   13. КЛАССЫ ВЫДЕЛЕНИЯ ТЕКСТА
+   ========================================= */
+
+.important {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.highlight {
+    padding: 0.15rem 0.35rem;
+    color: var(--text-color);
+    background-color: var(--highlight-color);
+    border-radius: 0.25rem;
+}
+
+/* =========================================
+   14. ЦИТАТЫ
+   ========================================= */
+
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1.25rem 1.5rem;
+    color: #465744;
+    background-color: #F0F4EB;
+    border-left: 0.35rem solid var(--accent-dark);
+    border-radius: 0.5rem;
+    font-style: italic;
+}
+
+/* =========================================
+   15. РАЗДЕЛИТЕЛИ
+   ========================================= */
+
+hr {
+    margin: 1.5rem auto;
+    border: 0;
+    border-top: 1px solid var(--border-color);
+}
+
+/* =========================================
+   16. ПОДВАЛ САЙТА
+   ========================================= */
+
+footer {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    color: #FFFFFF;
+    background-color: var(--footer-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* =========================================
+   17. АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ
+   ========================================= */
+
+@media (max-width: 600px) {
+    html {
+        font-size: 15px;
+    }
+
+    body {
+        padding: 0.6rem;
+    }
+
+    header {
+        padding: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.45rem;
+    }
+
+    main {
+        padding: 0.7rem;
+    }
+
+    section,
+    article,
+    aside {
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    figure img {
+        max-width: 100%;
+    }
+}
